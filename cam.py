@@ -1,17 +1,11 @@
-total=int(input("Number of bananas in the beginning:  "))
-distance=int(input('Distance to cover: '))
-cap=int(input('Maximum capacity of camel: '))
-
-lost=0
-start=total
-for i in range(distance):
-    while start>0:
-        start=start-cap
-        
-        if start==1:
-            lost=lost-1
-        lost=lost+2
-    lost=lost-1
-    start=total-lost
-    if start==0: break
-print("left: ",start)
+#Camel Banana Problem
+n=int(input('total bananas: '))
+distance=int(input('Distance: '))
+c=int(input('capacity: '))
+t = int(n/c)
+travel = 0
+for i in range(1,t+1):
+    travel = travel + (c/((2*i) - 1))
+    
+start = int(travel - 1000)
+print('bananas left :',start)
