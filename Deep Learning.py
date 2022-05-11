@@ -23,4 +23,4 @@ print('Accuracy: %.2f' % (accuracy*100))
 predictions = (model.predict(X) > 0.5).astype(int)
 # summarize the first 5 cases
 for i in range(5):
-print('%s => %d (expected %d)' % (X[i].tolist(), predictions[i], y[i]))
+  print('%s => %d (expected %d)' % (X[i].tolist(), predictions[i], y[i]))
